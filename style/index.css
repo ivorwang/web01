@@ -1,0 +1,321 @@
+html,
+body{
+	width: 100%;
+	height: auto;
+}
+main{
+	width: 100%;
+	height: auto;
+	background-color: #AED6FF;
+	color: #315A8D;
+}
+main > div{
+	width: 100%;
+	height: 100vh;
+}
+main h1{
+	text-align: center;
+	height: 20%;
+}
+.home{
+	background: url(../images/home_bg.svg) center center no-repeat;
+	background-size: 100%;
+}
+/*==========================*/
+/*story*/
+/*==========================*/
+.story{
+	font-size: 26px;
+}
+.story h1{
+	width: 20%;
+	height: 6%;
+	background: url(../images/story_title.svg) center center no-repeat;
+	background-size: contain;
+	margin: 115px auto 90px auto;
+}
+.story_txt{
+	display: flex;
+	justify-content: center;
+	align-content: space-between;
+	flex-wrap: wrap;
+	width: 100%;
+	height: 35%;
+	padding: 0 5%;
+	text-align: center;
+}
+.story_txt span{
+	display: block;
+	width: 100%;
+}
+.story_txt span:nth-child(2){
+	padding: 30px 0 40px 0;
+}
+.story_txt .EN_txt{
+	width: 100%;
+}
+.story_img {
+	display: flex;
+	height: 45%;
+	justify-content: flex-end;
+	align-items: flex-end;
+}
+.story_img img{
+	display: block;
+	width: 40%;
+	height: 71%;
+}
+/*==========================*/
+/*characters*/
+/*==========================*/
+.characters {
+	display: flex;
+	justify-content: center;
+	align-content: flex-start;
+	flex-wrap: wrap;
+}
+.characters h1{
+	width: 20%;
+	height: 6%;
+	background: url(../images/characters_title.svg) center center no-repeat;
+	background-size: contain;
+	margin: 0 auto 170px auto;
+}
+.characters .intro_box{
+	width: 100%;
+	height: 43%;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	margin: 0 auto;
+	padding: 0 20%;
+}
+.characters .intro_box div{
+	width: 30%;
+	height: calc(100% - 100px);
+}
+.intro_box .pupu_intro{
+	background: url(../images/pupu_intro.svg) center center no-repeat;
+	background-size: contain;
+}
+.intro_box .mango_intro{
+	background: url(../images/mango_intro.svg) center center no-repeat;
+	background-size: contain;
+}
+.intro_box .trobou_intro{
+	background: url(../images/trobou_intro.svg) center center no-repeat;
+	background-size: contain;
+}
+/*==========================*/
+/*product_example*/
+/*==========================*/
+.product_example{
+	
+}
+.product_example h1{
+	width: 20%;
+	height: 6%;
+	background: url(../images/) center center no-repeat;
+	background-size: contain;
+	margin: 0 auto 170px auto;
+}
+.product_example .example_box{
+	width: 100%;
+	height: 65%;
+	padding: 0 15%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.example_box button{
+	width: 4%;
+	height: 6%;
+}
+.prev_btn{
+	background: url(../images/prev_btn.svg) center center no-repeat;
+	background-size: contain;
+}
+.next_btn{
+	background: url(../images/next_btn.svg) center center no-repeat;
+	background-size: contain;
+}
+.example_box div{
+	width: 18%;
+	height: 33%;
+}
+.example_box .example1{
+	background: url(../images/product_example1.svg) center center no-repeat;
+	background-size: contain;
+}
+.example_box .example2{
+	background: url(../images/product_example2.svg) center center no-repeat;
+	background-size: contain;
+}
+.example_box .example3{
+	background: url(../images/product_example3.svg) center center no-repeat;
+	background-size: contain;
+}
+/*==========================*/
+/*graphics*/
+/*==========================*/
+.graphics{
+
+}
+.graphics h1{
+	width: 20%;
+	height: 6%;
+	background: url(../images/graphics_title.svg) center center no-repeat;
+	background-size: contain;
+	margin: 0 auto 170px auto;
+}
+.graphics .graphic_container{
+	width: 100%;
+	height: 65%;
+	padding: 0 15%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.graphic_container button{
+	width: 4%;
+	height: 6%;
+}
+.graphic_container .graphic_box{
+	width: 85%;
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: space-around;
+}
+.graphic_box div{
+	width: 26%;
+	height: 40%;
+}
+.graphic_box .graphic1{
+	background: url(../images/graphics1.svg) center center no-repeat;
+	background-size: contain;
+}
+.graphic_box .graphic2{
+	background: url(../images/graphics2.svg) center center no-repeat;
+	background-size: contain;
+}
+.graphic_box .graphic3{
+	background: url(../images/graphics3.svg) center center no-repeat;
+	background-size: contain;
+}
+.graphic_box .graphic4{
+	background: url(../images/graphics4.svg) center center no-repeat;
+	background-size: contain;
+}
+.graphic_box .graphic5{
+	background: url(../images/graphics5.svg) center center no-repeat;
+	background-size: contain;
+}
+.graphic_box .graphic6{
+	background: url(../images/graphics6.svg) center center no-repeat;
+	background-size: contain;
+}
+/*==========================*/
+/*exhibtion*/
+/*==========================*/
+.exhibition{
+
+}
+.exhibition h1{
+	width: 20%;
+	height: 6%;
+	background: url(../images/exhibition_title.svg) center center no-repeat;
+	background-size: contain;
+	margin: 0 auto 140px auto;
+}
+.exhibition .exhibition_container{
+	width: 100%;
+	height: 65%;
+	padding: 0 15%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.exhibition_container button{
+	width: 4%;
+	height: 6%;
+}
+.exhibition_container .exhibition_box{
+	width: 90%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	padding: 6% 3%;
+	background-color: #315A8D;
+}
+.exhibition_box h2{
+	text-align: center;
+	font-size: 24px;
+	margin-bottom: 30px;
+	color: #fff;
+}
+.exhibition_box b{
+	font-size: 16px;
+}
+.exhibition_box img{
+	display: block;
+	width: 100%;
+	height: calc(100% - 54px);
+}
+/*==========================*/
+/*footer*/
+/*==========================*/
+.info{
+	background: url(../images/info_bg.svg) bottom center no-repeat;
+	background-size: 100%;
+}
+.info h1{
+	width: 20%;
+	height: 6%;
+	background: url(../images/info_title.svg) center center no-repeat;
+	background-size: contain;
+	margin: 0 auto 170px auto;
+}
+.info .info_container{
+	width: 100%;
+	height: 35%;
+	padding: 0 30%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+.info_container .icon_box{
+	width: 100%;
+	height: 22%;
+	padding: 0 25%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.info_container a{
+	display: block;
+	width: 25%;
+	height: 100%;
+}
+.info_container .icon_fb{
+	background: url(../images/fb_icon.svg) center center no-repeat;
+	background-size: contain;
+}
+.info_container .icon_tw{
+	background: url(../images/tw_icon.svg) center center no-repeat;
+	background-size: contain;
+}
+.info_container .icon_ig{
+	background: url(../images/ig_icon.svg) center center no-repeat;
+	background-size: contain;
+}
+.info_container .icon_be{
+	background: url(../images/be_icon.svg) center center no-repeat;
+	background-size: contain;
+}
+.info_container span,
+.info_container b{
+	display: block;
+}
