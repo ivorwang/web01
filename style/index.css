@@ -17,6 +17,15 @@ main h1{
 	text-align: center;
 	height: 20%;
 }
+.menu_btn{
+	position: fixed;
+	width: 10.4%;
+	height: 14%;
+	top: 4%;
+	right: 2%;
+	background: url(../images/menu_btn.svg) center/contain no-repeat;
+	z-index: 1;	
+}
 .home{
 	background: url(../images/home_bg.svg) center center no-repeat;
 	background-size: 100%;
