@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,8 +8,9 @@
 	<link rel="stylesheet" type="text/css" href="../style/reset.css">
 	<link rel="stylesheet" type="text/css" href="../style/index.css">
 </head>
+
 <body>
-	<main>
+	<main id="app">
 		<button class="menu_btn">
 			<ul>
 				<li><span>Story</span></li>
@@ -82,12 +84,20 @@
 		<div class="exhibition">
 			<h1></h1>
 			<div class="exhibition_container">
-				<button class="prev_btn"></button>
+				<!-- 超過一筆才會顯示按鈕 -->
+				<button class="prev_btn" @click="prev"></button>
 				<div class="exhibition_box">
-					<h2>FUN!插畫大魚樂<b>亞洲插畫年度大賞精選展</b></h2>
-					<img src="../images/exhibition1.svg" alt="">
+					<div class="exhibition_group" :style="exhibition.movex">
+						<div class="exhibition_item" v-for="item in exhibition_loop">
+							<h2>{{item.exhibition_title}}<b>{{item.exhibition_text}}</b></h2>
+							<div class="exhibition_pic">
+								<img :src="item.exhibition_img_src" alt="">
+							</div>
+						</div>
+					</div>
 				</div>
-				<button class="next_btn"></button>
+				<!-- 超過一筆才會顯示按鈕 -->
+				<button class="next_btn" @click="next"></button>
 			</div>
 		</div>
 		<div class="info">
@@ -106,5 +116,8 @@
 			</div>
 		</div>
 	</main>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js'></script>
+	<script src="../js/index.js"></script>
 </body>
+
 </html>

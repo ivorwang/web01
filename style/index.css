@@ -346,6 +346,7 @@ main h1{
 /*exhibtion*/
 /*==========================*/
 .exhibition{
+	padding: 0 15%;
 
 }
 .exhibition h1{
@@ -357,23 +358,28 @@ main h1{
 }
 .exhibition .exhibition_container{
 	width: 100%;
-	height: 65%;
-	padding: 0 15%;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 }
 .exhibition_container button{
-	width: 4%;
-	height: 6%;
+	width: 41px;
+	height: 36px;
 }
 .exhibition_container .exhibition_box{
-	width: 90%;
-	height: 100%;
+	width: 100%;
+	margin: 0 30px;
+	overflow: hidden;
+}
+.exhibition_group {
 	display: flex;
-	flex-direction: column;
-	padding: 6% 3%;
-	background-color: #315A8D;
+	transition-duration: .3s;
+	/* transform: translateX(-00%); */
+}
+.exhibition_item {
+	flex: 0 0 100%;
+	padding: 30px 100px 40px;
+	background: #315A8D;
 }
 .exhibition_box h2{
 	text-align: center;
@@ -384,10 +390,16 @@ main h1{
 .exhibition_box b{
 	font-size: 16px;
 }
+.exhibition_pic {
+	position: relative;
+	padding-bottom: calc(100% * 0.511658);
+}
 .exhibition_box img{
-	display: block;
-	width: 100%;
-	height: calc(100% - 54px);
+	position: absolute;
+	height: 100%;
+	left: 0;
+	right: 0;
+	margin: auto;
 }
 /*==========================*/
 /*footer*/
