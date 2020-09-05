@@ -1,13 +1,11 @@
 let data = {
     product:{
-        now_page:1,
-        movex:"",
+        now_page:3,
+        movex:"transform: translateX(0);",
         info:[
            { product_img_src:"../images/product_example1.svg"},
            { product_img_src:"../images/product_example2.svg"},
            { product_img_src:"../images/product_example3.svg"},
-           { product_img_src:"../images/product_example4.svg"},
-           { product_img_src:"../images/product_example5.svg"},
         ]
     },
     exhibition: {
@@ -34,6 +32,7 @@ let vm = new Vue({
             let new_product = this.product.info
             console.log(count);
             if(count > 3){
+                this.product.movex = "transform: translateX(-105%);"
                 new_product.push(
                     {product_img_src : this.product.info[0].product_img_src},
                     {product_img_src : this.product.info[1].product_img_src},
@@ -66,12 +65,8 @@ let vm = new Vue({
         prev(str) {
             if (!this.btn_action) return;
             if(str === "exhibition"){
-                if(this.exhibition.info.length == 1) return //如果只有一筆資料不顯示按鈕，這行可拿掉
-                console.log("改變前" + this.exhibition.now_page);
                 this.exhibition.now_page -= 1;
-                console.log("改變後" + this.exhibition.now_page);
                 if (this.exhibition.now_page <= 0) {
-    
                     this.btnHandler();
                     this.exhibition.movex = "transform: translateX(-" + this.exhibition.now_page * 100 + "%);";
                     this.exhibition.now_page = this.exhibition.info.length - 2;
@@ -80,25 +75,62 @@ let vm = new Vue({
                     this.exhibition.movex = "transform: translateX(-" + this.exhibition.now_page * 100 + "%)";
                 }
             }else if(str === "product"){
-                console.log(this.product.info.length);
+                this.product.now_page -= 1;
+                if(this.product.now_page <= 0){
+
+                    console.log('aaaaa')
+                    this.btnHandler();
+                    this.product.movex = "transform: translateX(-" + this.product.now_page * 35 + "%)";                   
+                    this.product.now_page = this.product.info.length - 6;
+                    console.log("page"+this.product.now_page);
+                    console.log("length" + (this.product.info.length - 4));
+                    let loop_first = setTimeout(this.loopHandler, 300);
+                }else{
+                    this.btnHandler();
+                    this.product.movex = "transform: translateX(-" + this.product.now_page * 35 + "%)";
+                }
             }
             
         },
-        next() {
+        next(str) {
             if (!this.btn_action) return;
-            if(this.exhibition.info.length == 1) return  //如果只有一筆資料不顯示按鈕，這行可拿掉
-            this.exhibition.now_page += 1;
-            if (this.exhibition.now_page > this.exhibition.info.length - 2) {
-                this.btnHandler();
-                this.exhibition.movex = "transform: translateX(-" + this.exhibition.now_page * 100 + "%);";
-                this.exhibition.now_page = 1;
-                let loop_first = setTimeout(this.loopHandler, 300);
-            } else {
-                this.btnHandler();
-                this.exhibition.movex = "transform: translateX(-" + this.exhibition.now_page * 100 + "%);";
+            if(str === "exhibition"){
+                this.exhibition.now_page += 1;
+                if (this.exhibition.now_page > this.exhibition.info.length - 2) {
+                    this.btnHandler();
+                    this.exhibition.movex = "transform: translateX(-" + this.exhibition.now_page * 100 + "%);";
+                    this.exhibition.now_page = 1;
+                    let loop_first = setTimeout(this.loopHandler, 300);
+                } else {
+                    this.btnHandler();
+                    this.exhibition.movex = "transform: translateX(-" + this.exhibition.now_page * 100 + "%);";
+                }
+            }else if(str === "product"){
+                this.product.now_page += 1;
+                if(this.product.now_page > this.product.info.length - 4){
+                    this.btnHandler();
+                    this.product.movex = "transform: translateX(-" + this.product.now_page * 35 + "%);";
+                    this.product.now_page = 3;
+                    let loop_first = setTimeout(this.loopHandler, 300);
+                }else{
+                    this.btnHandler();
+                    this.product.movex = "transform: translateX(-" + this.product.now_page * 35 + "%)";
+                }
+                
             }
         },
         loopHandler() {
+            if(this.product.now_page === 3){
+                this.product.movex =
+                "transition-duration: 0s; transform: translateX(-" +
+                this.product.now_page * 35 +
+                "%);";
+            }else if(this.product.now_page === this.product.info.length - 6){
+                this.product.movex =
+                "transition-duration: 0s; transform: translateX(-" +
+                this.product.now_page * 35 +
+                "%);";
+            }
             if (this.exhibition.now_page === 1) {
                 this.exhibition.movex =
                     "transition-duration: 0s; transform: translateX(-" +
