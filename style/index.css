@@ -236,7 +236,7 @@ main h1{
 /*product_example*/
 /*==========================*/
 .product_example{
-	
+	padding: 0 15%;
 }
 .product_example h1{
 	width: 20%;
@@ -245,17 +245,25 @@ main h1{
 	background-size: contain;
 	margin: 0 auto 170px auto;
 }
-.product_example .example_box{
+.product_container{
 	width: 100%;
-	height: 65%;
-	padding: 0 15%;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 }
-.example_box button{
-	width: 4%;
-	height: 6%;
+.product_example .example_box{
+	width: 100%;
+	margin: 0 30px;
+	overflow: hidden;
+}
+.example_group{
+	display: flex;
+	transform: translate(-0%);
+	transition-duration: .3s;
+}
+.product_container button{
+	width: 41px;
+	height: 36px;
 }
 .prev_btn{
 	background: url(../images/prev_btn.svg) center center no-repeat;
@@ -265,22 +273,16 @@ main h1{
 	background: url(../images/next_btn.svg) center center no-repeat;
 	background-size: contain;
 }
-.example_box div{
-	width: 18%;
-	height: 33%;
+.example_item{
+	flex: 0 0 30%;
 }
-.example_box .example1{
-	background: url(../images/product_example1.svg) center center no-repeat;
-	background-size: contain;
+.example_item:first-child{margin-right: 2.5%;}
+.example_item:last-child{margin-left: 2.5%;}
+.example_item:not(:first-child):not(:last-child){margin: 0 2.5%;}
+.example_item img{
+	width: 100%;
 }
-.example_box .example2{
-	background: url(../images/product_example2.svg) center center no-repeat;
-	background-size: contain;
-}
-.example_box .example3{
-	background: url(../images/product_example3.svg) center center no-repeat;
-	background-size: contain;
-}
+
 /*==========================*/
 /*graphics*/
 /*==========================*/

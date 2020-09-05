@@ -58,11 +58,21 @@
 		</div>
 		<div class="product_example">
 			<h1></h1>
-			<div class="example_box">
-				<button class="prev_btn"></button>
-				<div class="example1"></div>
-				<div class="example2"></div>
-				<div class="example3"></div>
+			<div class="product_container">
+				<button class="prev_btn" @click="prev('product')"></button>
+				<div class="example_box">
+					<div class="example_group">
+						<div class="example_item" v-for="item in product_loop">
+							<img :src="item.product_img_src" alt="">
+						</div>
+						<!-- <div class="example_item">
+							<img src="../images/product_example2.svg" alt="">
+						</div>
+						<div class="example_item">
+							<img src="../images/product_example3.svg" alt="">
+						</div> -->
+					</div>
+				</div>
 				<button class="next_btn"></button>
 			</div>
 		</div>
@@ -85,7 +95,7 @@
 			<h1></h1>
 			<div class="exhibition_container">
 				<!-- 超過一筆才會顯示按鈕 -->
-				<button class="prev_btn" @click="prev"></button>
+				<button class="prev_btn" @click="prev('exhibition')" v-if="exhibition.info.length !=1"></button>
 				<div class="exhibition_box">
 					<div class="exhibition_group" :style="exhibition.movex">
 						<div class="exhibition_item" v-for="item in exhibition_loop">
@@ -97,7 +107,7 @@
 					</div>
 				</div>
 				<!-- 超過一筆才會顯示按鈕 -->
-				<button class="next_btn" @click="next"></button>
+				<button class="next_btn" @click="next" v-if="exhibition.info.length !=1"></button>
 			</div>
 		</div>
 		<div class="info">
