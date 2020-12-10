@@ -13,16 +13,16 @@
 	<main id="app">
 		<button class="menu_btn">
 			<ul>
-				<li><span>Story</span></li>
-				<li><span>Characters</span></li>
-				<li><span>Graphics</span></li>
-				<li><span>Exhibition</span></li>
-				<li><span>Info</span></li>
+				<li><a href="#story"><span>Story</span></a></li>
+				<li><a href="#characters"><span>Characters</span></a></li>
+				<li><a href="#graphics"><span>Graphics</span></a></li>
+				<li><a href="#exhibition"><span>Exhibition</span></a></li>
+				<li><a href="#info"><span>Info</span></a></li>
 			</ul>
 		</button>
-		<div class="home">
+		<div id="home" class="home">
 		</div>
-		<div class="story">
+		<div id="story" class="story">
 			<h1></h1>
 			<div class="story_txt">
 				<span>萌果君是一個以台灣農業為底蘊，創造出的芒果農夫。</span>
@@ -39,7 +39,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="characters">
+		<div id="characters" class="characters">
 			<h1></h1>
 			<div class="intro_box">
 				<div class="pupu_intro">
@@ -56,7 +56,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="product_example">
+		<div id="product_example" class="product_example">
 			<h1></h1>
 			<div class="product_container">
 				<button class="prev_btn" @click="prev('product')"  v-if="product.info.length > 3"></button>
@@ -70,7 +70,7 @@
 				<button class="next_btn" @click="next('product')"  v-if="product.info.length > 3"></button>
 			</div>
 		</div>
-		<div class="graphics">
+		<div id="graphics" class="graphics">
 			<h1></h1>
 			<div class="graphic_container">
 				<button class="prev_btn"></button>
@@ -85,7 +85,7 @@
 				<button class="next_btn"></button>
 			</div>
 		</div>
-		<div class="exhibition">
+		<div id="exhibition" class="exhibition">
 			<h1></h1>
 			<div class="exhibition_container">
 				<!-- 超過一筆才會顯示按鈕 -->
@@ -104,7 +104,7 @@
 				<button class="next_btn" @click="next('exhibition')" v-if="exhibition.info.length !=1"></button>
 			</div>
 		</div>
-		<div class="info">
+		<div id="info" class="info">
 			<h1></h1>
 			<div class="info_container">
 				<div class="icon_box">
