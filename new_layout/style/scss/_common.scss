@@ -1,0 +1,16 @@
+/*================================================*/
+/*module*/
+/*================================================*/
+.wrap{
+    max-width: 1110px;
+    margin: auto;
+    @include mw_xl{
+        padding: 0 15px;
+    }
+    @include mw_lg{
+        max-width: 690px;
+    }
+    @include mw_md{
+        max-width: 345px;
+    }
+}

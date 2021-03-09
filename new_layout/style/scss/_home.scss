@@ -1,0 +1,47 @@
+/*================================================*/
+/*header*/
+/*================================================*/
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.logo{
+    width: 125px;
+    height: 70px;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    &__btn{
+        width: 135px;
+        padding: 10px 0;
+        font-size: 20px;
+        color: #b1d6ff;
+        border: 2px solid #b1d6ff;
+        border-radius: 20px;
+
+        & + .nav__btn{
+            margin-left: 35px;
+        }
+    }
+}
+/*================================================*/
+/*main*/
+/*================================================*/
+.main_container{
+
+}
+.link{
+    margin-right: 55px;
+}
+.main{
+
+}
+/*================================================*/
+/*footer*/
+/*================================================*/
+.footer{
+    height: 40px;
+}

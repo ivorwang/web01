@@ -1,0 +1,58 @@
+/*================================================*/
+/*media*/
+/*================================================*/
+@mixin mw_xl{
+	@media screen and (max-width: 1199px){
+		@content;
+	}
+}
+@mixin mw_lg{
+	@media screen and (max-width: 991px){
+		@content;
+	}
+}
+@mixin mw_md{
+	@media screen and (max-width: 767px){
+		@content;
+	}
+}
+@mixin mw_sm{
+	@media screen and (max-width: 575px){
+		@content;
+	}
+}
+@mixin hoverHandler($op, $bg, $txt) {
+	@media (pointer: fine),
+	(-moz-touch-enabled: 0),
+	screen and (-ms-high-contrast: active),
+	(-ms-high-contrast: none) {
+		&:hover{
+			@content;
+			opacity: $op;
+			background-color: $bg;
+			color: $txt;
+		}
+	}
+	&:active{
+		@content;
+		opacity: $op;
+		background-color: $bg;
+		color: $txt;
+	}
+}
+/*================================================*/
+/*layout*/
+/*================================================*/
+@mixin pos_abs($top , $right , $bottom , $left){
+    position: absolute;
+    top: $top;
+    bottom:  $bottom;
+    right: $right;
+    left: $left;
+}
+@mixin d_flex($flex, $wrap, $jc, $ai){
+    display: $flex;
+    flex-wrap: $wrap;
+    justify-content: $jc;
+    align-items: $ai;
+}

@@ -1,0 +1,89 @@
+/*================================================*/
+/*media*/
+/*================================================*/
+/*================================================*/
+/*layout*/
+/*================================================*/
+/*================================================*/
+/*module*/
+/*================================================*/
+.wrap {
+  max-width: 1110px;
+  margin: auto;
+}
+
+@media screen and (max-width: 1199px) {
+  .wrap {
+    padding: 0 15px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .wrap {
+    max-width: 690px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .wrap {
+    max-width: 345px;
+  }
+}
+
+/*================================================*/
+/*header*/
+/*================================================*/
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 125px;
+  height: 70px;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav__btn {
+  width: 135px;
+  padding: 10px 0;
+  font-size: 20px;
+  color: #b1d6ff;
+  border: 2px solid #b1d6ff;
+  border-radius: 20px;
+}
+
+.nav__btn + .nav__btn {
+  margin-left: 35px;
+}
+
+/*================================================*/
+/*main*/
+/*================================================*/
+.link {
+  margin-right: 55px;
+}
+
+/*================================================*/
+/*footer*/
+/*================================================*/
+.footer {
+  height: 40px;
+}
+/*# sourceMappingURL=all.css.map */
