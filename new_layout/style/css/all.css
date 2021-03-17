@@ -44,11 +44,12 @@
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 20px;
+  margin-top: 30px;
 }
 
 .logo {
-  width: 125px;
-  height: 70px;
+  width: 126px;
+  height: 78px;
 }
 
 .nav {
@@ -76,14 +77,126 @@
 /*================================================*/
 /*main*/
 /*================================================*/
+.main_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .link {
   margin-right: 55px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.link__item {
+  margin-top: 13px;
+  width: 40px;
+  height: 40px;
+}
+
+.main {
+  width: calc(100% - 95px);
+  height: 550px;
+  padding-bottom: 55px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.main .chabao {
+  position: relative;
+  width: 10.7%;
+  margin-bottom: 20px;
+}
+
+.main .chabao__detail {
+  position: absolute;
+  top: 0;
+  right: 100%;
+  width: 70px;
+  height: 50px;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.main .mango {
+  position: relative;
+  width: 36.4%;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.main .mango__detail {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70px;
+  height: 50px;
+}
+
+.main .hanji {
+  position: relative;
+  width: 12%;
+}
+
+.main .hanji__detail {
+  position: absolute;
+  top: 0;
+  left: calc(100% - 15px);
+  width: 70px;
+  height: 50px;
+}
+
+.main .slogan_img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 83.3%;
 }
 
 /*================================================*/
 /*footer*/
 /*================================================*/
 .footer {
+  position: relative;
   height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer span {
+  font-size: 12px;
+  color: #315a87;
+}
+
+.author_name {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  height: 12px;
+  margin: auto;
 }
 /*# sourceMappingURL=all.css.map */

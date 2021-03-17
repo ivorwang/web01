@@ -6,10 +6,11 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+    margin-top: 30px;
 }
 .logo{
-    width: 125px;
-    height: 70px;
+    width: 126px;
+    height: 78px;
 }
 .nav{
     display: flex;
@@ -21,7 +22,6 @@
         color: #b1d6ff;
         border: 2px solid #b1d6ff;
         border-radius: 20px;
-
         & + .nav__btn{
             margin-left: 35px;
         }
@@ -31,17 +31,94 @@
 /*main*/
 /*================================================*/
 .main_container{
-
+    display: flex;
 }
 .link{
     margin-right: 55px;
+    display: flex;
+    align-items: flex-end;
+    &__list{
+
+    }
+    &__item{
+        margin-top: 13px;
+        width: 40px;
+        height: 40px;
+    }
 }
 .main{
-
+    width: calc(100% - 95px);
+    height: 550px;
+    padding-bottom: 55px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    .chabao{
+        position: relative;
+        width: 10.7%;
+        margin-bottom: 20px;
+        &__detail{
+            position: absolute;
+            top: 0;
+            right: 100%;
+            width: 70px;
+            height: 50px;
+            transform: rotateY(180deg);
+        }
+    }
+    .mango{
+        position: relative;
+        width: 36.4%;
+        align-self: flex-start;
+        &__detail{
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 70px;
+            height: 50px;
+        }
+    }
+    .hanji{
+        position: relative;
+        width: 12%;
+        &__detail{
+            position: absolute;
+            top: 0;
+            left: calc(100% - 15px);
+            width: 70px;
+            height: 50px;
+        }
+    }
+    .slogan_img{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 83.3%;
+    }
 }
 /*================================================*/
 /*footer*/
 /*================================================*/
 .footer{
+    position: relative;
     height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer span{
+    font-size: 12px;
+    color: #315a87;
+}
+.author_name{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    height: 12px;
+    margin: auto;
 }
