@@ -50,6 +50,10 @@ table {
 
 
 /*==========================custom==========================*/
+html,
+body{
+	height: 100%;
+}
 body{
 	text-align: center;
 	font-family: 'Noto Sans TC', sans-serif;

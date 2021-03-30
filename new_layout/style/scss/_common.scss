@@ -2,15 +2,13 @@
 /*module*/
 /*================================================*/
 .wrap{
-    max-width: 1110px;
     margin: auto;
+    padding: 30px 6.25% 0 6.25%;
+    height: 100%;
     @include mw_xl{
-        padding: 0 15px;
-    }
-    @include mw_lg{
-        max-width: 690px;
+        padding: 30px 6.25% 60px 6.25%;
     }
     @include mw_md{
-        max-width: 345px;
+
     }
 }

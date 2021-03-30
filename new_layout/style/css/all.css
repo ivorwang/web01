@@ -8,25 +8,14 @@
 /*module*/
 /*================================================*/
 .wrap {
-  max-width: 1110px;
   margin: auto;
+  padding: 30px 6.25% 0 6.25%;
+  height: 100%;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1023px) {
   .wrap {
-    padding: 0 15px;
-  }
-}
-
-@media screen and (max-width: 991px) {
-  .wrap {
-    max-width: 690px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .wrap {
-    max-width: 345px;
+    padding: 30px 6.25% 60px 6.25%;
   }
 }
 
@@ -44,7 +33,6 @@
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 20px;
-  margin-top: 30px;
 }
 
 .logo {
@@ -61,6 +49,17 @@
           align-items: center;
 }
 
+@media screen and (max-width: 1023px) {
+  .nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 60px;
+    background: #b1d6ff;
+  }
+}
+
 .nav__btn {
   width: 135px;
   padding: 10px 0;
@@ -70,8 +69,21 @@
   border-radius: 20px;
 }
 
+@media screen and (max-width: 1023px) {
+  .nav__btn {
+    color: #1e2f54;
+    width: 25%;
+  }
+}
+
 .nav__btn + .nav__btn {
   margin-left: 35px;
+}
+
+@media screen and (max-width: 1023px) {
+  .nav__btn + .nav__btn {
+    margin-left: 0;
+  }
 }
 
 /*================================================*/
@@ -81,6 +93,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: calc(100% - 138px);
 }
 
 .link {
@@ -101,7 +114,7 @@
 
 .main {
   width: calc(100% - 95px);
-  height: 550px;
+  height: 100%;
   padding-bottom: 55px;
   position: relative;
   display: -webkit-box;
@@ -110,30 +123,18 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.main .chabao {
+.main .intro_box {
   position: relative;
-  width: 10.7%;
-  margin-bottom: 20px;
-}
-
-.main .chabao__detail {
-  position: absolute;
-  top: 0;
-  right: 100%;
-  width: 70px;
-  height: 50px;
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
 }
 
 .main .mango {
   position: relative;
-  width: 36.4%;
+  width: 29vw;
   -ms-flex-item-align: start;
       align-self: flex-start;
 }
@@ -142,27 +143,47 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 70px;
-  height: 50px;
+  width: 5.5vw;
+  height: 4vw;
+}
+
+.main .chabao {
+  position: absolute;
+  bottom: -5%;
+  left: 0;
+  width: 8.5vw;
+  margin-bottom: 20px;
+}
+
+.main .chabao__detail {
+  position: absolute;
+  top: 0;
+  right: 100%;
+  width: 5.5vw;
+  height: 4vw;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 
 .main .hanji {
-  position: relative;
-  width: 12%;
+  position: absolute;
+  bottom: -10%;
+  right: -35%;
+  width: 9.5vw;
 }
 
 .main .hanji__detail {
   position: absolute;
   top: 0;
   left: calc(100% - 15px);
-  width: 70px;
-  height: 50px;
+  width: 5.5vw;
+  height: 4vw;
 }
 
 .main .slogan_img {
   position: absolute;
   top: 0;
-  bottom: 0;
+  bottom: 15%;
   left: 0;
   right: 0;
   margin: auto;

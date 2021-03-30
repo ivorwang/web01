@@ -6,7 +6,6 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
-    margin-top: 30px;
 }
 .logo{
     width: 126px;
@@ -15,6 +14,14 @@
 .nav{
     display: flex;
     align-items: center;
+    @include mw_xl{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        height: 60px;
+        background: #b1d6ff;
+    }
     &__btn{
         width: 135px;
         padding: 10px 0;
@@ -22,8 +29,15 @@
         color: #b1d6ff;
         border: 2px solid #b1d6ff;
         border-radius: 20px;
+        @include mw_xl{
+            color: #1e2f54;
+            width: 25%;
+        }
         & + .nav__btn{
             margin-left: 35px;
+            @include mw_xl{
+                margin-left: 0;
+            }
         }
     }
 }
@@ -32,6 +46,7 @@
 /*================================================*/
 .main_container{
     display: flex;
+    height: calc(100% - 138px);
 }
 .link{
     margin-right: 55px;
@@ -48,52 +63,62 @@
 }
 .main{
     width: calc(100% - 95px);
-    height: 550px;
+    height: 100%;
     padding-bottom: 55px;
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
-    .chabao{
+    align-items: center;
+    .intro_box{
         position: relative;
-        width: 10.7%;
-        margin-bottom: 20px;
-        &__detail{
-            position: absolute;
-            top: 0;
-            right: 100%;
-            width: 70px;
-            height: 50px;
-            transform: rotateY(180deg);
-        }
     }
     .mango{
         position: relative;
-        width: 36.4%;
+        // width: 36.4%;
+        width: 29vw;
         align-self: flex-start;
         &__detail{
             position: absolute;
             top: 0;
             right: 0;
-            width: 70px;
-            height: 50px;
+            width: 5.5vw;
+            height: 4vw;
+        }
+    }
+    .chabao{
+        position: absolute;
+        bottom: -5%;
+        left: 0;
+        // width: 10.7%;
+        width: 8.5vw;
+        margin-bottom: 20px;
+        &__detail{
+            position: absolute;
+            top: 0;
+            right: 100%;
+            width: 5.5vw;
+            height: 4vw;
+            transform: rotateY(180deg);
         }
     }
     .hanji{
-        position: relative;
-        width: 12%;
+        position: absolute;
+        bottom: -10%;
+        right: -35%;
+        // width: 12%;
+        width: 9.5vw;
         &__detail{
             position: absolute;
             top: 0;
             left: calc(100% - 15px);
-            width: 70px;
-            height: 50px;
+            width: 5.5vw;
+            height: 4vw;
         }
     }
     .slogan_img{
         position: absolute;
         top: 0;
-        bottom: 0;
+        bottom: 15%;
         left: 0;
         right: 0;
         margin: auto;
