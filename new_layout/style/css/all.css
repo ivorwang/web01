@@ -40,6 +40,13 @@
   height: 78px;
 }
 
+@media screen and (max-width: 1023px) {
+  .logo {
+    width: 72px;
+    height: 44px;
+  }
+}
+
 .nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -73,6 +80,7 @@
   .nav__btn {
     color: #1e2f54;
     width: 25%;
+    font-size: 16px;
   }
 }
 
@@ -86,6 +94,31 @@
   }
 }
 
+.nav.--ph {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .nav.--ph {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: static;
+    width: auto;
+    height: auto;
+    background: transparent;
+  }
+  .nav.--ph .nav__btn {
+    color: #b1d6ff;
+    width: 100px;
+    height: 30px;
+    padding: 6px 0;
+  }
+}
+
 /*================================================*/
 /*main*/
 /*================================================*/
@@ -94,6 +127,18 @@
   display: -ms-flexbox;
   display: flex;
   height: calc(100% - 138px);
+}
+
+@media screen and (max-width: 1023px) {
+  .main_container {
+    height: calc(100% - 104px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .main_container {
+    height: calc(100% - 134px);
+  }
 }
 
 .link {
@@ -106,6 +151,12 @@
           align-items: flex-end;
 }
 
+@media screen and (max-width: 767px) {
+  .link {
+    display: none;
+  }
+}
+
 .link__item {
   margin-top: 13px;
   width: 40px;
@@ -115,7 +166,6 @@
 .main {
   width: calc(100% - 95px);
   height: 100%;
-  padding-bottom: 55px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -128,6 +178,12 @@
           align-items: center;
 }
 
+@media screen and (max-width: 767px) {
+  .main {
+    width: 100%;
+  }
+}
+
 .main .intro_box {
   position: relative;
 }
@@ -137,6 +193,12 @@
   width: 29vw;
   -ms-flex-item-align: start;
       align-self: flex-start;
+}
+
+@media screen and (max-width: 575px) {
+  .main .mango {
+    width: 66.7vw;
+  }
 }
 
 .main .mango__detail {
@@ -153,6 +215,14 @@
   left: 0;
   width: 8.5vw;
   margin-bottom: 20px;
+}
+
+@media screen and (max-width: 575px) {
+  .main .chabao {
+    width: 19.5vw;
+    bottom: -4%;
+    left: 12%;
+  }
 }
 
 .main .chabao__detail {
@@ -172,6 +242,14 @@
   width: 9.5vw;
 }
 
+@media screen and (max-width: 575px) {
+  .main .hanji {
+    width: 21.9vw;
+    bottom: -22%;
+    right: 3%;
+  }
+}
+
 .main .hanji__detail {
   position: absolute;
   top: 0;
@@ -188,6 +266,12 @@
   right: 0;
   margin: auto;
   width: 83.3%;
+}
+
+@media screen and (max-width: 1023px) {
+  .main .slogan_img {
+    bottom: 0%;
+  }
 }
 
 /*================================================*/
