@@ -12,3 +12,36 @@
 
     }
 }
+.page_box{
+    align-self: flex-end;
+    li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        background-color: #315A87;
+        font-size: 28px;
+        border-radius: 50%;
+        cursor: pointer;
+
+        &.on{
+            background-color: #B1D6FF;
+        }
+    }
+    .prev::after{
+        content:'';
+        width: 12px;
+        height: 100%;
+        background: url('../../images/icon_prev.svg')no-repeat center/contain;
+    }
+    .next::after{
+        content:'';
+        width: 12px;
+        height: 100%;
+        background: url('../../images/icon_next.svg')no-repeat center/contain;
+    }
+    li+li{
+        margin-top: 20px;
+    }
+}

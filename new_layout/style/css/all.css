@@ -19,6 +19,51 @@
   }
 }
 
+.page_box {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.page_box li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #315A87;
+  font-size: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.page_box li.on {
+  background-color: #B1D6FF;
+}
+
+.page_box .prev::after {
+  content: '';
+  width: 12px;
+  height: 100%;
+  background: url("../../images/icon_prev.svg") no-repeat center/contain;
+}
+
+.page_box .next::after {
+  content: '';
+  width: 12px;
+  height: 100%;
+  background: url("../../images/icon_next.svg") no-repeat center/contain;
+}
+
+.page_box li + li {
+  margin-top: 20px;
+}
+
 /*================================================*/
 /*header*/
 /*================================================*/
