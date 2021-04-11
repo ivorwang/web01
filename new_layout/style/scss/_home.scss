@@ -99,7 +99,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
     @include mw_md{
+        flex-wrap: wrap;
         width: 100%;
     }
     .intro_box{
@@ -183,6 +185,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include mw_md{
+        display: none;
+    }
 }
 .footer span{
     font-size: 12px;
