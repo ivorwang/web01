@@ -99,68 +99,123 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
     @include mw_md{
         flex-wrap: wrap;
         width: 100%;
     }
-    .intro_box{
+    .intro{
         position: relative;
-    }
-    .mango{
-        position: relative;
-        // width: 36.4%;
-        width: 29vw;
-        align-self: flex-start;
-        @include mw_sm{
-            width: 66.7vw;
+        &__item{
+            &.--mango{
+                position: relative;
+                width: 29vw;
+                align-self: flex-start;
+                @include mw_sm{
+                    width: 66.7vw;
+                }
+            }
+            &.--chabao{
+                position: absolute;
+                bottom: -5%;
+                left: 0;
+                width: 8.5vw;
+                margin-bottom: 20px;
+                @include mw_sm{
+                    width: 19.5vw;
+                    bottom: -4%;
+                    left: 12%;
+                }
+            }
+            &.--hanji{
+                position: absolute;
+                bottom: -10%;
+                right: -35%;
+                width: 9.5vw;
+                @include mw_sm{
+                    width: 21.9vw;
+                    bottom: -22%;
+                    right: 3%;
+                }
+            }
         }
         &__detail{
             position: absolute;
             top: 0;
-            right: 0;
             width: 5.5vw;
             height: 4vw;
+            cursor: pointer;
+            @include mw_sm{
+                width: 12vw;
+                height: 8vw;
+            }
+            &.--mango{
+                right: 0;
+            }
+            &.--chabao{
+                right: 100%;
+            }
+            &.--hanji{
+                left: calc(100% - 15px);
+            }
         }
-    }
-    .chabao{
-        position: absolute;
-        bottom: -5%;
-        left: 0;
-        // width: 10.7%;
-        width: 8.5vw;
-        margin-bottom: 20px;
-        @include mw_sm{
-            width: 19.5vw;
-            bottom: -4%;
-            left: 12%;
-        }
-        &__detail{
+        &__txt{
+            visibility: hidden;
+            width: 215px;
+            font-size: 14px;
             position: absolute;
             top: 0;
-            right: 100%;
-            width: 5.5vw;
-            height: 4vw;
-            transform: rotateY(180deg);
-        }
-    }
-    .hanji{
-        position: absolute;
-        bottom: -10%;
-        right: -35%;
-        // width: 12%;
-        width: 9.5vw;
-        @include mw_sm{
-            width: 21.9vw;
-            bottom: -22%;
-            right: 3%;
-        }
-        &__detail{
-            position: absolute;
-            top: 0;
-            left: calc(100% - 15px);
-            width: 5.5vw;
-            height: 4vw;
+            color: #604c3f;
+            border: 3px solid #604c3f;
+            border-radius: 20px;
+            background: #fbebdf;
+            text-align: left;
+            padding: 13px;
+            transition: opacity .3s, visibility .3s;
+            opacity: 0;
+            z-index: 1;
+            @include mw_xl{
+                width: 145px;
+            }
+            @include mw_sm{
+                width: 315px;
+                height: 240px;
+                line-height: 20px;
+                position: fixed;
+                top: auto;
+                bottom: 80px;
+                margin: auto;
+                padding: 35px 20px;
+                border: 0;
+                border-radius: 0;
+                color: #fff;
+                background: rgba(0, 0, 0, .8);
+                box-shadow: 3px 3px 5px rgba(0, 0, 0, .7);
+            }
+            &.--mango{
+                left: 80%;
+                @include mw_sm{
+                    left: 0;
+                    right: 0;
+                }
+            }
+            &.--chabao{
+                right: 100%;
+                @include mw_sm{
+                    left: 0;
+                    right: 0;
+                }
+            }
+            &.--hanji{
+                left: calc(100% - 15px);
+                @include mw_sm{
+                    left: 0;
+                    right: 0;
+                }
+            }
+            &.--active{
+                visibility: visible;
+                opacity: 1;
+            }
         }
     }
     .slogan_img{

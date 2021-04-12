@@ -9,14 +9,14 @@
 		padding: 30px 6.25% 60px 6.25%;
 	}
 	@include mw_md{
-
+		padding: 18px 5.3% 60px 5.3%;
 	}
 }
 .normol_page{
 	align-self: flex-end;
 	@include mw_md{
 		display: none;
-		// display: flex;	
+		// display: flex;
 		// flex-direction: row-reverse;
 	}
 	&_btn{
@@ -34,7 +34,7 @@
 			background-color: #B1D6FF;
 		}
 
-		
+
 	}
 	.prev,
 	.next{
@@ -47,7 +47,7 @@
 		width: 12px;
 		height: 100%;
 		background: url('../../images/icon_prev.svg')no-repeat center/contain;
-		
+
 	}
 	.next::after{
 		content:'';
@@ -59,7 +59,7 @@
 	li+li{
 		margin-top: 20px;
 		@include mw_md{
-			margin-top: 0;	
+			margin-top: 0;
 		}
 	}
 }
