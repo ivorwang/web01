@@ -12,7 +12,7 @@
 
 	}
 }
-.page{
+.normol_page{
 	align-self: flex-end;
 	@include mw_md{
 		display: none;
@@ -61,5 +61,36 @@
 		@include mw_md{
 			margin-top: 0;	
 		}
+	}
+}
+.normol_tab{
+	display: inline-flex;
+	justify-content: center;
+	height: 35px;
+	color: #fff;
+	font-size: 18px;
+
+	li{
+		position: relative;
+		@extend %hand;
+	}
+	li.on:after{
+		width: 35px;
+		opacity: 1;
+	}
+	li::after{
+		content:'';
+		display: block;
+		width: 0;
+		height: 3px;
+		margin: 10px auto 0;
+		background-color: #fff;
+		border-radius: 50px;
+		opacity: 0;
+		transition-duration: .3s;
+	}
+
+	li+li{
+		margin-left: 50px;
 	}
 }
