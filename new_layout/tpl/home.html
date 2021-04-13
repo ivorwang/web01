@@ -4,7 +4,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<meta name="description" content="萌果君 夯吉喵 柴寶 Mangoking">
+	<title>Mangoking</title>
 	<link rel="stylesheet" href="../style/css/reset.css">
 	<link rel="stylesheet" href="../style/css/all.css">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
@@ -55,7 +56,7 @@
 					<div class="intro__item --mango">
 						<img class="intro__img" src="../images/mangoking.svg" alt="">
 						<img class="intro__detail --mango" src="../images/etc.svg" alt="">
-						<p class="intro__txt --mango --active">
+						<p class="intro__txt --mango">
 							在神秘樹上掉下來的萌果君，喜歡料理，但煮的不一定能吃，沒東西煮就會到森林裡探索找食材。<br>之後在森林裡開了一家店，專門做料理給大家吃。</p>
 					</div>
 					<div class="intro__item --chabao">
@@ -88,7 +89,7 @@
 		var shotxt_ph = document.querySelectorAll("#showtxt_ph li");
 		var showtxt_pc = document.querySelectorAll("#showtxt_pc .intro__detail");
 		var intro__txt = document.querySelectorAll("#showtxt_pc .intro__txt");
-		var now_active = 0;
+		var now_active = null;
 
 		for (let i = 0; i < showtxt_pc.length; i++) {
 			const element = showtxt_pc[i];
@@ -104,7 +105,9 @@
 		}
 
 		function showtxtHandler(num) {
-			intro__txt[now_active].classList.remove('--active');
+			if(now_active !== null){
+				intro__txt[now_active].classList.remove('--active');
+			}
 			intro__txt[num].classList.add('--active');
 			now_active = num;
 		}
