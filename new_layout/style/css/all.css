@@ -655,13 +655,7 @@
 
 .about {
   overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  position: relative;
   width: 100%;
   height: 100%;
 }
@@ -676,29 +670,87 @@
 
 .about .scroll_box {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 100%;
-          flex: 0 1 100%;
+  height: calc(100% - 116px - 35px - 60px);
+  margin-top: 60px;
+}
+
+@media screen and (max-width: 991px) {
+  .about .scroll_box {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
 }
 
 .about_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 100%;
 }
 
+@media screen and (max-width: 991px) {
+  .about_box {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
 .about_item {
-  width: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
   height: 100%;
+  padding: 0 15px;
 }
 
 .about_item img {
   width: auto;
   height: 100%;
+}
+
+.about_shadow {
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 116px - 35px - 60px);
+  bottom: 0;
+  pointer-events: none;
+}
+
+.about_shadow::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 200px;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(#203055), to(rgba(32, 48, 85, 0)));
+  background: linear-gradient(to right, #203055 0%, rgba(32, 48, 85, 0) 100%);
+}
+
+.about_shadow::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: '';
+  width: 200px;
+  height: 100%;
+  background: -webkit-gradient(linear, right top, left top, from(#203055), to(rgba(32, 48, 85, 0)));
+  background: linear-gradient(to left, #203055 0%, rgba(32, 48, 85, 0) 100%);
+}
+
+@media screen and (max-width: 991px) {
+  .about_shadow::before, .about_shadow::after {
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .about_shadow::before, .about_shadow::after {
+    width: 50px;
+  }
 }
 /*# sourceMappingURL=all.css.map */
