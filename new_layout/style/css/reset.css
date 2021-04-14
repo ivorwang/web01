@@ -79,3 +79,15 @@ button{
     padding: 0;
     background: transparent;
 }
+::-webkit-scrollbar-thumb{
+	background-color: #c1c1c1;
+	border-radius:10px;
+}
+::-webkit-scrollbar-corner{
+	background-color: #f1f1f1;
+}
+::-webkit-scrollbar{
+	width: 6px;
+	height: 6px;
+	background-color: #1e2f54;
+}
