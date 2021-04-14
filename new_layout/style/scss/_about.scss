@@ -73,4 +73,63 @@
 			}
 		}
 	}
+
+
+
+	&_author{
+		display: flex;
+		height: calc(100% - 35px);
+		color: #fff;
+		@include mw_lg{
+			flex-wrap: wrap;
+		}
+		&_txt{
+			display: flex;
+			align-content: center;
+			flex-wrap: wrap;
+			text-align: left;
+			line-height: 20px;
+			p+p{
+				margin-top: 5px;
+			}
+		}
+
+		&_pic{
+			position: relative;
+			width: 60%;
+			flex: none;
+			@include mw_lg{
+				width: 100%;
+			}
+			&::before{
+				content:'';
+				position: absolute;
+				right: 0;
+				display: block;
+				width: 70%;
+				height: 100%;
+				background: url('../../images/about/about_Author_bg.jpg')no-repeat;
+				background-size: cover;
+			}
+			img{
+				position: absolute;
+				width: 110%;
+				top: 0;
+				bottom: -10%;
+				right: 5%;
+				margin: auto 0;
+				// transform: translate(-20% , 0);
+			}
+			// &::after{
+			// 	content:'';
+			// 	position: absolute;
+			// 	transform: translate(-30% , 10%);
+			// 	display: block;
+			// 	width: 100%;
+			// 	height: 100%;
+			// 	background: url('../../images/about/about_Author.png')no-repeat;
+			// 	background-size: cover;
+			// }
+		}
+	}
 }
