@@ -1,6 +1,7 @@
 <style scoped></style>
 
-<template src="/new_layout/components/home"></template>
+<template src="./components/home"></template>
 
 
+<script src="./components/home/index.js"></script>
 <script></script>

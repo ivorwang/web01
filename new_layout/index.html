@@ -75,8 +75,18 @@
 
 		let vm = new Vue({
 			el: '#app',
-			router
+			router,
+			mounted(){
+				let showtxt_pc = document.querySelectorAll("#showtxt_pc .intro__detail");
+				console.log(showtxt_pc);
+			},
+			methods: {
+				show: function (e) {
+					console.log(e);
+				}
+			}
 		})
+		
 	</script>
 
 </body>

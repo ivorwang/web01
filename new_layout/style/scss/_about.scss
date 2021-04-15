@@ -3,7 +3,22 @@
 	position: relative;
 	width: 100%;
 	height: 100%;
-
+	&::before{
+		content:'';
+		position: absolute;
+		right: 0;
+		display: block;
+		width: 35%;
+		height: 100%;
+		background: url('../../images/about/about_Author_bg.jpg')no-repeat;
+		background-size: cover;
+		@include mw_lg{
+			width: 70%;
+			height: 75%;
+			bottom: 0;
+			background-size: cover;
+		}
+	}
 	&_info{
 		width: 316px;
 		margin: 20px auto 0;
@@ -81,7 +96,7 @@
 		height: calc(100% - 35px);
 		color: #fff;
 		@include mw_lg{
-			flex-wrap: wrap;
+			display: block;
 		}
 		&_txt{
 			display: flex;
@@ -100,17 +115,18 @@
 			flex: none;
 			@include mw_lg{
 				width: 100%;
-			}
-			&::before{
-				content:'';
-				position: absolute;
-				right: 0;
-				display: block;
-				width: 70%;
 				height: 100%;
-				background: url('../../images/about/about_Author_bg.jpg')no-repeat;
-				background-size: cover;
 			}
+			// &::before{
+			// 	content:'';
+			// 	position: absolute;
+			// 	right: 0;
+			// 	display: block;
+			// 	width: 70%;
+			// 	height: 100%;
+			// 	background: url('../../images/about/about_Author_bg.jpg')no-repeat;
+			// 	background-size: cover;
+			// }
 			img{
 				position: absolute;
 				width: 110%;
@@ -119,6 +135,9 @@
 				right: 5%;
 				margin: auto 0;
 				// transform: translate(-20% , 0);
+				@include mw_lg{
+					bottom: auto;
+				}
 			}
 			// &::after{
 			// 	content:'';
