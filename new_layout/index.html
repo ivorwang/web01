@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Mangoking</title>
+	<meta name="description" content="萌果君 夯吉喵 柴寶 Mangoking">
 	<link rel="stylesheet" href="./style/css/reset.css">
 	<link rel="stylesheet" href="./style/css/all.css">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
@@ -19,9 +20,9 @@
 				<img src="./images/logo.svg" alt="">
 			</h1>
 			<ul class="nav">
-				<li class="nav__btn">Portfolio</li>
+				<li class="nav__btn"><router-link to="/">Portfolio</router-link></li>
 				<li class="nav__btn">Product</li>
-				<li class="nav__btn">Download</li>
+				<li class="nav__btn"><router-link to="/download">Download</router-link></li>
 				<li class="nav__btn">About Us</li>
 			</ul>
 		</header>
@@ -43,9 +44,8 @@
 				</li>
 			</ul>
 		</div>
-		<div class="main_container">
-			<router-view></router-view>
-		</div>
+		<router-view></router-view>
+	
 		<footer class="footer">
 			<span>Copyright © 2021 Mangoking. All rights reserved</span>
 			<span class="author_name">Artist : IvorWang</span>
@@ -63,27 +63,37 @@
 			{
 				path: '',
 				components: {
-					default: httpVueLoader('./components/home/index.vue'),
+					default: httpVueLoader('./components/home/home.vue'),
+				}
+			},
+			{
+				path: '/download',
+				components: {
+					default: httpVueLoader('./components/download/download.vue'),
+				}
+			},
+			{
+				path: '*',
+				components: {
+					default: httpVueLoader('./components/home/home.vue'),
 				}
 			},
 		]
 
 		const router = new VueRouter({
-			// mode: 'history',
-			routes // (缩写) 相当于 routes: routes
+			mode: 'history',
+			routes: routes // (缩写) 相当于 routes: routes
 		})
 
 		let vm = new Vue({
 			el: '#app',
 			router,
-			mounted(){
-				let showtxt_pc = document.querySelectorAll("#showtxt_pc .intro__detail");
-				console.log(showtxt_pc);
+
+			mounted() {
+
 			},
 			methods: {
-				show: function (e) {
-					console.log(e);
-				}
+
 			}
 		})
 		
