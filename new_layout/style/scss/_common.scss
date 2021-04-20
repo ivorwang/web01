@@ -12,7 +12,28 @@
 		padding: 18px 5.3% 60px 5.3%;
 	}
 }
-.normal_page{
+.main_container{
+    display: flex;
+    width: 100%;
+    height: calc(100% - 138px);
+    padding-left: 95px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    @include mw_xl{
+        height: calc(100% - 144px);
+        flex-wrap: wrap;
+        padding-left: 0;
+    }
+    @include mw_md{
+        height: calc(100% - 124px);
+	}
+	&.--portfolio{
+		padding-top: 30px;
+		flex-wrap: wrap;
+		align-content: flex-start;
+	}
+}
+.normol_page{
 	align-self: flex-end;
 	@include mw_md{
 		display: none;

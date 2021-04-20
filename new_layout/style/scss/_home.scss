@@ -104,22 +104,6 @@
 /*================================================*/
 /*main*/
 /*================================================*/
-.main_container{
-    display: flex;
-    width: 100%;
-    height: calc(100% - 138px);
-    padding-left: 95px;
-    overflow-x: hidden;
-    overflow-y: auto;
-    @include mw_xl{
-        height: calc(100% - 144px);
-        flex-wrap: wrap;
-        padding-left: 0;
-    }
-    @include mw_md{
-        height: calc(100% - 124px);
-    }
-}
 .main{
     width: 100%;
     height: 100%;
