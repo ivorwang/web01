@@ -17,10 +17,11 @@
 	<div id="app" class="wrap">
 		<header class="header">
 			<h1 class="logo">
-				<img src="./images/logo.svg" alt="">
+					<router-link to="/"><img src="./images/logo.svg" alt=""></router-link>
+				
 			</h1>
 			<ul class="nav">
-				<li class="nav__btn"><router-link to="/">Portfolio</router-link></li>
+				<li class="nav__btn"><router-link to="/portfolio">Portfolio</router-link></li>
 				<li class="nav__btn">Product</li>
 				<li class="nav__btn"><router-link to="/download">Download</router-link></li>
 				<li class="nav__btn">About Us</li>
@@ -67,6 +68,12 @@
 				}
 			},
 			{
+				path: '/portfolio',
+				components: {
+					default: httpVueLoader('./components/portfolio/portfolio.vue'),
+				}
+			},
+			{
 				path: '/download',
 				components: {
 					default: httpVueLoader('./components/download/download.vue'),
@@ -81,7 +88,7 @@
 		]
 
 		const router = new VueRouter({
-			mode: 'history',
+			// mode: 'history',
 			routes: routes // (缩写) 相当于 routes: routes
 		})
 
