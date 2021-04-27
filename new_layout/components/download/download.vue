@@ -37,19 +37,5 @@ module.exports = {
 			}
 		}
 	}
-	// data() {
-	// 	return {
-	// 		nowActive: null,
-	// 	};
-	// },
-	// methods: {
-	// 	show(index) {
-	// 		if(index == this.nowActive){
-	// 			this.nowActive = null
-	// 		}else{
-	// 			this.nowActive = index;
-	// 		}
-	// 	},
-	// },
 };
 </script>
