@@ -8,12 +8,9 @@ module.exports = {
 	data() {
 		return {
 			tabNum: 0,
+			tabName:'exhibition',
 		};
 	},
-	methods: {
-		tabHandler() {
-			console.log(this.tabNum);
-		},
-	},
+	
 };
 </script>

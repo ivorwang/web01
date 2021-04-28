@@ -2,11 +2,11 @@
 
     <main class="main">
         <!-- _author -->
-        <div class="about">
+        <div :class="['about' ,  this.tabName]">
             <ul class="normol_tab">
-                <li @click="tabNum = 0" :class="[ this.tabNum == 0 ? 'on' : '']">Exhibition</li>
-                <li @click="tabNum = 1" :class="[ this.tabNum == 1 ? 'on' : '']">Author</li>
-                <li @click="tabNum = 2" :class="[ this.tabNum == 2 ? 'on' : '']">contact us</li>
+                <li @click="tabNum = 0 , tabName = 'exhibition'" :class="[ this.tabNum == 0 ? 'on' : '']">Exhibition</li>
+                <li @click="tabNum = 1 , tabName = 'author'" :class="[ this.tabNum == 1 ? 'on' : '']">Author</li>
+                <li @click="tabNum = 2 , tabName = 'contact'" :class="[ this.tabNum == 2 ? 'on' : '']">contact us</li>
             </ul>
             <div class="about_info" style="display: none;">
                 關於我們關於我們關於我們關於我們關於我們關於我們關於我們關於我們關於我們關於我們關於我們關於我們關於我們們關於我們關於我們關於我們關於我們關於我們
