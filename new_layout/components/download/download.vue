@@ -5,6 +5,11 @@
 
 <script>
 module.exports = {
+	data() {
+		return {
+			tabNum: 0,
+		};
+	},
 	mounted(){
 		window.onresize = () => {
 			return (() => {

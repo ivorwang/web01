@@ -2,8 +2,8 @@
     <main class="main">
         <div class="download">
             <ul class="normol_tab">
-                <li class="on">PC wallpaper</li>
-                <li>Mobile wallpaper</li>
+                <li @click="tabNum = 0" :class="[ this.tabNum == 0 ? 'on' : '']">PC wallpaper</li>
+                <li @click="tabNum = 1" :class="[ this.tabNum == 1 ? 'on' : '']">Mobile wallpaper</li>
             </ul>
 
             <div class="download_box">

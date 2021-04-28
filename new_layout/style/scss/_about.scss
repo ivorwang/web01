@@ -193,6 +193,11 @@
 			font-size: 20px;
 			border: 4px solid #B1D6FF;
 			border-radius: 8px;
+
+			@include mw_sm{
+				width: 100%;
+				min-width: unset;
+			}
 			> p{
 				line-height: 28px;
 			}
