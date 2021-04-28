@@ -17,14 +17,20 @@
 	<div id="app" class="wrap">
 		<header class="header">
 			<h1 class="logo">
-					<router-link to="/"><img src="./images/logo.svg" alt=""></router-link>
-				
+				<router-link to="/"><img src="./images/logo.svg" alt=""></router-link>
+
 			</h1>
 			<ul class="nav">
-				<li class="nav__btn"><router-link to="/portfolio">Portfolio</router-link></li>
+				<li class="nav__btn">
+					<router-link to="/portfolio">Portfolio</router-link>
+				</li>
 				<li class="nav__btn">Product</li>
-				<li class="nav__btn"><router-link to="/download">Download</router-link></li>
-				<li class="nav__btn">About Us</li>
+				<li class="nav__btn">
+					<router-link to="/download">Download</router-link>
+				</li>
+				<li class="nav__btn">
+					<router-link to="/about">About Us</router-link>
+				</li>
 			</ul>
 		</header>
 		<div class="link">
@@ -46,7 +52,7 @@
 			</ul>
 		</div>
 		<router-view></router-view>
-	
+
 		<footer class="footer">
 			<span>Copyright © 2021 Mangoking. All rights reserved</span>
 			<span class="author_name">Artist : IvorWang</span>
@@ -80,6 +86,12 @@
 				}
 			},
 			{
+				path: '/about',
+				components: {
+					default: httpVueLoader('./components/about/about.vue'),
+				}
+			},
+			{
 				path: '*',
 				components: {
 					default: httpVueLoader('./components/home/home.vue'),
@@ -103,7 +115,7 @@
 
 			}
 		})
-		
+
 	</script>
 
 </body>
