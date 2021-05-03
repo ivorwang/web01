@@ -12,7 +12,7 @@
 </head>
 
 <body>
-	<div class="wrap">
+	<div id="app" class="wrap">
 		<header class="header">
 			<h1 class="logo">
 				<img src="../images/logo.svg" alt="">
@@ -31,8 +31,7 @@
 							alt=""></a>
 				</li>
 				<li class="link__item --tw">
-					<a href="https://twitter.com/mangoking_tw" target="_blank"><img src="../images/tw.svg"
-							alt=""></a>
+					<a href="https://twitter.com/mangoking_tw" target="_blank"><img src="../images/tw.svg" alt=""></a>
 				</li>
 				<li class="link__item --be">
 					<a href="https://www.behance.net/mangokingtw" target="_blank"><img src="../images/be.svg"
@@ -45,21 +44,24 @@
 			</ul>
 		</div>
 		<div class="main_container">
-			
+
 			<main class="main">
 				<!-- _author -->
-				<div class="about">
+				<div :class="['about' ,  this.tabName]">
 					<ul class="normol_tab">
-						<li class="on">Exhibition</li>
-						<li>Author</li>
-						<li>contact us</li>
+						<li @click="tabNum = 0 , tabName = 'exhibition'" :class="[ this.tabNum == 0 ? 'on' : '']">
+							Exhibition</li>
+						<li @click="tabNum = 1 , tabName = 'author'" :class="[ this.tabNum == 1 ? 'on' : '']">Author
+						</li>
+						<li @click="tabNum = 2 , tabName = 'contact'" :class="[ this.tabNum == 2 ? 'on' : '']">contact
+							us</li>
 					</ul>
-					<div class="about_info" style="display: none;">
+					<div class="about_info">
 						關於我們關於我們關於我們關於我們關於我們關於我們關於我們關於我們關於我們關於我們關於我們關於我們關於我們們關於我們關於我們關於我們關於我們關於我們
 					</div>
 
 					<!-- about Exhibition start -->
-					<div class="scroll_box" style="display: none;">
+					<div class="scroll_box about_exhibition _shadow">
 
 						<div class="about_box">
 							<div class="about_item">
@@ -74,11 +76,11 @@
 						</div>
 
 					</div>
-					<div class="about_shadow" style="display: none;"></div>
+				
 					<!-- about Exhibition end -->
 
 					<!-- about Author start -->
-					<div class="about_author" style="display: none;">
+					<div class="about_author">
 						<div class="about_author_txt">
 							<p>關於我們關於我們關於我們關於我們關於我們關於我們關於我們關於我們關於我們關於我們關於我們關於我們關於我們們關於我們關於我們關於我們關於我們關於我們</p>
 							<p>關於我們關於我們關於我們關於我們關於我們關於我們關於我們關於我們關於我們關於我們關於我們關於我們關於我們們關於我們關於我們關於我們關於我們關於我們</p>
@@ -131,10 +133,20 @@
 	</div>
 
 
-
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.9/vue.js'
+		integrity='sha512-o9SZrtqlGkpa7EF+dDrNjEdRFFYhymlrBzDKpolHNolxsyx0IcXAbEm9i1e8QpoiMgEdKZVtY8XiK1t8i6jVDA=='
+		crossorigin='anonymous'></script>
 	<script>
 
-
+		new Vue({
+			el: '#app',
+			data() {
+				return {
+					tabNum: 0,
+					tabName: 'exhibition',
+				}
+			}
+		})
 	</script>
 </body>
 
