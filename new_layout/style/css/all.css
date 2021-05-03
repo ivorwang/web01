@@ -65,6 +65,12 @@
       align-content: flex-start;
 }
 
+.main_container.--portfolio .normal_page {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
 .normal_page {
   -ms-flex-item-align: end;
       align-self: flex-end;
@@ -606,11 +612,11 @@
   transition: width .3s;
 }
 
-.sort__btn:hover {
+.sort__btn:hover, .sort__btn.--active {
   color: #fff;
 }
 
-.sort__btn:hover:before {
+.sort__btn:hover:before, .sort__btn.--active:before {
   width: 80%;
 }
 
@@ -622,6 +628,7 @@
 /*character*/
 /*================================================*/
 .character {
+  position: relative;
   width: 100%;
   height: calc(100% - 25px);
   padding: 20px 30px 0 30px;
