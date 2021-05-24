@@ -112,6 +112,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @include mw_lg{
+        min-height: unset;
+    }
     @include mw_md{
         flex-wrap: wrap;
         width: 100%;

@@ -4,10 +4,10 @@
     &_box{
         display: flex;
         flex-wrap: wrap;
-        @include mw_md{
+        @include mw_lg{
             overflow-x: auto;
             overflow-y:hidden;
-            height: 670px;
+            height: 100%;
             flex-direction: column;
         } 
     }
@@ -23,9 +23,9 @@
         @include mw_xxl{
             width: calc(100% / 3 - 16px);
         }
-        @include mw_md{
+        @include mw_lg{
             flex: none;
-            width: calc(90% / 2);
+            width: calc(75% / 2);
         }
         @include mw_sm{
             width: 90%;
