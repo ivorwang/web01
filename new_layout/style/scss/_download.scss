@@ -43,8 +43,9 @@
 		@include mw_md{
 			@include scrollbar(auto , hidden);
 			flex-direction: column;
+			align-content: center;
 			height: 100%;
-			padding-top: 15%;
+			
 		}
 	}
 	&_item{

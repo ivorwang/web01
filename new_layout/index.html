@@ -23,7 +23,9 @@
 				<li class="nav__btn">
 					<router-link to="/portfolio">Portfolio</router-link>
 				</li>
-				<li class="nav__btn">Product</li>
+				<li class="nav__btn">
+					<router-link to="/product">Product</router-link>
+				</li>
 				<li class="nav__btn">
 					<router-link to="/download">Download</router-link>
 				</li>
@@ -88,6 +90,12 @@
 				path: '/about',
 				components: {
 					default: httpVueLoader('./components/about/about.vue'),
+				}
+			},
+			{
+				path: '/product',
+				components: {
+					default: httpVueLoader('./components/product/product.vue'),
 				}
 			},
 			{

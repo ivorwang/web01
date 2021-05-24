@@ -14,10 +14,11 @@ module.exports = {
 		window.onresize = () => {
 			return (() => {
 				// this.$route
-				this.sizeHnadler()
-            })()
-        }
-		
+				if(this.$route.path == "/download") {
+					this.sizeHnadler()
+				}
+			})()
+		}
 	},
 	methods:{
 		sizeHnadler(){
