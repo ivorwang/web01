@@ -29,6 +29,7 @@
         }
         @include mw_sm{
             width: 90%;
+            height: 100%;
         }
         &::before{
             position: absolute;

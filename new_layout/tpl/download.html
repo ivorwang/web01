@@ -15,48 +15,62 @@
 	<div id="app" class="wrap">
 		<header class="header">
 			<h1 class="logo">
-				<!-- <img src="../images/logo.svg" alt=""> -->
+				<a href="home.html">
+					<img src="../images/logo.svg" alt="">
+				</a>
 			</h1>
 			<ul class="nav">
-				<li class="nav__btn">Portfolio</li>
-				<li class="nav__btn">Product</li>
-				<li class="nav__btn">Download</li>
-				<li class="nav__btn">About Us</li>
+				<li class="nav__btn">
+					<a href="portfolio.html">Portfolio</a>
+				</li>
+				<li class="nav__btn">
+					<a href="product.html">Product</a>
+				</li>
+				<li class="nav__btn">
+					<a href="download.html">Download</a>
+				</li>
+				<li class="nav__btn">
+					<a href="about.html">About Us</a>
+				</li>
 			</ul>
 		</header>
 		<div class="main_container">
 			<div class="link">
 				<ul class="link__list">
 					<li class="link__item --ig">
-						<a href="https://www.instagram.com/mangoking.tw/" target="_blank"><img src="../images/ig.svg"
-								alt=""></a>
+						<a href="https://www.instagram.com/mangoking.tw/" target="_blank">
+							<img src="../images/icon/icon_ig.svg" alt="">
+						</a>
 					</li>
 					<li class="link__item --tw">
-						<a href="https://twitter.com/mangoking_tw" target="_blank"><img src="../images/tw.svg"
-								alt=""></a>
+						<a href="https://twitter.com/mangoking_tw" target="_blank">
+							<img src="../images/icon/icon_tw.svg" alt="">
+						</a>
 					</li>
 					<li class="link__item --be">
-						<a href="https://www.behance.net/mangokingtw" target="_blank"><img src="../images/be.svg"
-								alt=""></a>
+						<a href="https://www.behance.net/mangokingtw" target="_blank">
+							<img src="../images/icon/icon_be.svg" alt="">
+						</a>
 					</li>
 					<li class="link__item --fb">
-						<a href="https://www.facebook.com/mangoking.tw" target="_blank"><img src="../images/fb.svg"
-								alt=""></a>
+						<a href="https://www.facebook.com/mangoking.tw" target="_blank">
+							<img src="../images/icon/icon_fb.svg" alt="">
+						</a>
 					</li>
 				</ul>
 			</div>
 			<main class="main">
 				<div class="download">
 					<ul class="normol_tab">
-						<li class="on">PC wallpaper</li>
-						<li>Mobile wallpaper</li>
+						<li @click="tabNum = 0" :class="[ this.tabNum == 0 ? 'on' : '']">PC wallpaper</li>
+						<li @click="tabNum = 1" :class="[ this.tabNum == 1 ? 'on' : '']">Mobile wallpaper</li>
 					</ul>
 
 					<div class="download_box">
 
 						<div class="download_item" v-for="item in picList">
 							<div class="download_item_pic" data-text="wallpaper01">
-								<!-- <img src="../images/W540x960_01 (1).jpg" alt=""> -->
+								<img src="../images/W540x960_01 (1).jpg" alt="">
 							</div>
 						</div>
 					</div>
@@ -86,11 +100,16 @@
 
 	<script>
 		var data = {
+			tabNum: 0,
 			picList: [
-				{ piclink: "../images/W540x960_01 (1).jpg" },
-				{ piclink: "../images/W540x960_01 (1).jpg" },
-				{ piclink: "../images/W540x960_01 (1).jpg" },
-				{ piclink: "../images/W540x960_01 (1).jpg" },
+				{ piclink: "../images/download/W540x960_01 (1).jpg" },
+				{ piclink: "../images/download/W540x960_01 (1).jpg" },
+				{ piclink: "../images/download/W540x960_01 (1).jpg" },
+				{ piclink: "../images/download/W540x960_01 (1).jpg" },
+				{ piclink: "../images/download/W540x960_01 (1).jpg" },
+				{ piclink: "../images/download/W540x960_01 (1).jpg" },
+				{ piclink: "../images/download/W540x960_01 (1).jpg" },
+				{ piclink: "../images/download/W540x960_01 (1).jpg" },
 			]
 		}
 
@@ -98,10 +117,44 @@
 			el: '#app',
 			data: data,
 			mounted() {
-				
-
-			}
+				window.onresize = () => {
+					return (() => {
+						// this.$route
+						// if (this.$route.path == "/download") {
+						this.sizeHnadler();
+						// }
+					})();
+				};
+			},
+			methods: {
+				sizeHnadler() {
+					// var download = document.querySelector('.download');
+					var download_box = document.querySelector(".download_box");
+					var download_item = document.querySelectorAll(".download_item");
+					// 左右多家15間距
+					var download_pic_width =
+						document.querySelector(".download_item_pic").clientWidth + 30;
+					// var download_pic_height = document.querySelector('.download_item_pic').clientHeight + 20;
+					// console.log(download_pic_height);
+					// var download_tab = document.querySelector('.download_tab');
+					if (window.screen.width > 767) {
+						let newItem_w = parseInt(
+							download_box.clientWidth / download_pic_width
+						);
+						download_item[0].style.width = "calc(100% / 4 )";
+						for (var i = 0; i < download_item.length; i++) {
+							download_item[i].style.width =
+								"calc(100% /" + newItem_w + ")";
+						}
+					} else {
+						for (var i = 0; i < download_item.length; i++) {
+							download_item[i].style.width = "";
+						}
+					}
+				},
+			},
 		})
 	</script>
 </body>
+
 </html>

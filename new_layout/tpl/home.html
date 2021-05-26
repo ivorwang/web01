@@ -13,33 +13,51 @@
 </head>
 
 <body>
-	<div class="wrap">
+	<div id="app" class="wrap">
 		<header class="header">
 			<h1 class="logo">
-				<img src="../images/logo.svg" alt="">
+				<a href="home.html">
+					<img src="../images/logo.svg" alt="">
+				</a>
 			</h1>
 			<ul class="nav">
-				<li class="nav__btn">Portfolio</li>
-				<li class="nav__btn">Product</li>
-				<li class="nav__btn">Download</li>
-				<li class="nav__btn">About Us</li>
+				<li class="nav__btn">
+					<a href="portfolio.html">Portfolio</a>
+				</li>
+				<li class="nav__btn">
+					<a href="product.html">Product</a>
+				</li>
+				<li class="nav__btn">
+					<a href="download.html">Download</a>
+				</li>
+				<li class="nav__btn">
+					<a href="about.html">About Us</a>
+				</li>
 			</ul>
 		</header>
 		<div class="link">
-			<ul class="link__list">
-				<li class="link__item --ig">
-					<a href="https://www.instagram.com/mangoking.tw/" target="_blank"><img src="../images/ig.svg" alt=""></a>
-				</li>
-				<li class="link__item --tw">
-					<a href="https://twitter.com/mangoking_tw" target="_blank"><img src="../images/tw.svg" alt=""></a>
-				</li>
-				<li class="link__item --be">
-					<a href="https://www.behance.net/mangokingtw" target="_blank"><img src="../images/be.svg" alt=""></a>
-				</li>
-				<li class="link__item --fb">
-					<a href="https://www.facebook.com/mangoking.tw" target="_blank"><img src="../images/fb.svg" alt=""></a>
-				</li>
-			</ul>
+            <ul class="link__list">
+                <li class="link__item --ig">
+                    <a href="https://www.instagram.com/mangoking.tw/" target="_blank">
+                        <img src="../images/icon/icon_ig.svg" alt="">
+                    </a>
+                </li>
+                <li class="link__item --tw">
+                    <a href="https://twitter.com/mangoking_tw" target="_blank">
+                        <img src="../images/icon/icon_tw.svg" alt="">
+                    </a>
+                </li>
+                <li class="link__item --be">
+                    <a href="https://www.behance.net/mangokingtw" target="_blank">
+                        <img src="../images/icon/icon_be.svg" alt="">
+                    </a>
+                </li>
+                <li class="link__item --fb">
+                    <a href="https://www.facebook.com/mangoking.tw" target="_blank">
+                        <img src="../images/icon/icon_fb.svg" alt="">
+                    </a>
+                </li>
+            </ul>
 		</div>
 		<div class="main_container">
 			<ul id="showtxt_ph" class="nav --ph">
@@ -50,28 +68,29 @@
 			<main class="main">
 				<div id="showtxt_pc" class="intro">
 					<div class="intro__item --mango">
-						<img class="intro__img" src="../images/mangoking.svg" alt="">
-						<img class="intro__detail --mango" src="../images/etc.svg" alt="">
-						<p class="intro__txt --mango">
-							在神秘樹上掉下來的萌果君，喜歡料理，但煮的不一定能吃，沒東西煮就會到森林裡探索找食材。<br>之後在森林裡開了一家店，專門做料理給大家吃。
-						</p>
+						<img class="intro__img" src="../images/home/mangoking.svg" alt="">
+						<img @click="show(1)" class="intro__detail --mango" src="../images/home/etc.svg" alt="">
+						<p @click="show(null)"
+							:class="['intro__txt' , '--mango' , this.nowActive == 1 ? '--active' : '']">
+							在神秘樹上掉下來的萌果君，喜歡料理，但煮的不一定能吃，沒東西煮就會到森林裡探索找食材。<br>之後在森林裡開了一家店，專門做料理給大家吃。</p>
 					</div>
 					<div class="intro__item --chabao">
-						<img class="intro__img" src="../images/chabao.svg" alt="">
-						<img class="intro__detail --chabao" src="../images/etc.svg" alt="">
-						<p class="intro__txt --chabao">
-							去家族旅遊途中聞到萌果君在煮東西的味道而被吸引，跑到廚房裡偷吃，被發現後則留下來還飯錢，結果越吃越多，一直到現在。自以為是松鼠界的帥哥，卻常常被誤認為是柴犬。
-						</p>
+						<img class="intro__img" src="../images/home/chabao.svg" alt="">
+						<img @click="show(2)" class="intro__detail --chabao" src="../images/home/etc.svg" alt="">
+						<p @click="show(null)"
+							:class="['intro__txt' , '--chabao' , this.nowActive == 2 ? '--active' : '']">
+							去家族旅遊途中聞到萌果君在煮東西的味道而被吸引，跑到廚房裡偷吃，被發現後則留下來還飯錢，結果越吃越多，一直到現在。自以為是松鼠界的帥哥，卻常常被誤認為是柴犬。</p>
 					</div>
 					<div class="intro__item --hanji">
-						<img class="intro__img" src="../images/hanji.svg" alt="">
-						<img class="intro__detail --hanji" src="../images/etc.svg" alt="">
-						<p class="intro__txt --hanji">
+						<img class="intro__img" src="../images/home/hanji.svg" alt="">
+						<img @click="show(3)" class="intro__detail --hanji" src="../images/home/etc.svg" alt="">
+						<p @click="show(null)"
+							:class="['intro__txt' , '--hanji' , this.nowActive == 3 ? '--active' : '']">
 							夯吉喵，萌果君的主人，性格激動容易感到驚訝，喜歡去遛市集、釣魚跟發呆，只吃美食。總是隨身攜帶一把小刀，最常說的話”把食物交出來”。
 						</p>
 					</div>
 				</div>
-				<img class="slogan_img" src="../images/slogan.svg" alt="">
+				<img class="slogan_img" src="../images/home/slogan.svg" alt="">
 			</main>
 		</div>
 		<footer class="footer">
@@ -84,32 +103,29 @@
 
 
 
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.9/vue.js'
+		integrity='sha512-o9SZrtqlGkpa7EF+dDrNjEdRFFYhymlrBzDKpolHNolxsyx0IcXAbEm9i1e8QpoiMgEdKZVtY8XiK1t8i6jVDA=='
+		crossorigin='anonymous'></script>
+
 	<script>
-		var shotxt_ph = document.querySelectorAll("#showtxt_ph li");
-		var showtxt_pc = document.querySelectorAll("#showtxt_pc .intro__detail");
-		var intro__txt = document.querySelectorAll("#showtxt_pc .intro__txt");
-		var now_active = null;
+		let vm = new Vue({
+			el: '#app',
+			data() {
+				return {
+					nowActive: null,
+				};
+			},
+			methods: {
+				show(index) {
+					if (index == this.nowActive) {
+						this.nowActive = null
+					} else {
+						this.nowActive = index;
+					}
+				},
+			},
+		})
 
-		for (let i = 0; i < showtxt_pc.length; i++) {
-			const element = showtxt_pc[i];
-			element.addEventListener('click', () => {
-				showtxtHandler(i)
-			});
-		}
-		for (let i = 0; i < shotxt_ph.length; i++) {
-			const element = shotxt_ph[i];
-			element.addEventListener('click', () => {
-				showtxtHandler(i)
-			});
-		}
-
-		function showtxtHandler(num) {
-			if(now_active !== null){
-				intro__txt[now_active].classList.remove('--active');
-			}
-			intro__txt[num].classList.add('--active');
-			now_active = num;
-		}
 	</script>
 </body>
 

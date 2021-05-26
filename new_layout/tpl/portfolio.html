@@ -1,70 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="../style/css/reset.css">
-	<link rel="stylesheet" href="../style/css/all.css">
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style/css/all.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&family=Roboto&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <div class="main_container --portfolio">
-        <div class="sort">
-            <ul class="sort__list">
-                <li class="sort__btn">Character</li>
-                <li class="sort__btn">GIF</li>
-                <li class="sort__btn">Comics</li>
-                <li class="sort__btn">Video</li>
+    <div id="app" class="wrap">
+        <header class="header">
+            <h1 class="logo">
+                <a href="home.html">
+                    <img src="../images/logo.svg" alt="">
+                </a>
+            </h1>
+            <ul class="nav">
+                <li class="nav__btn">
+                    <a href="portfolio.html">Portfolio</a>
+                </li>
+                <li class="nav__btn">
+                    <a href="product.html">Product</a>
+                </li>
+                <li class="nav__btn">
+                    <a href="download.html">Download</a>
+                </li>
+                <li class="nav__btn">
+                    <a href="about.html">About Us</a>
+                </li>
+            </ul>
+        </header>
+        <div class="link">
+            <ul class="link__list">
+                <li class="link__item --ig">
+                    <a href="https://www.instagram.com/mangoking.tw/" target="_blank">
+                        <img src="../images/icon/icon_ig.svg" alt="">
+                    </a>
+                </li>
+                <li class="link__item --tw">
+                    <a href="https://twitter.com/mangoking_tw" target="_blank">
+                        <img src="../images/icon/icon_tw.svg" alt="">
+                    </a>
+                </li>
+                <li class="link__item --be">
+                    <a href="https://www.behance.net/mangokingtw" target="_blank">
+                        <img src="../images/icon/icon_be.svg" alt="">
+                    </a>
+                </li>
+                <li class="link__item --fb">
+                    <a href="https://www.facebook.com/mangoking.tw" target="_blank">
+                        <img src="../images/icon/icon_fb.svg" alt="">
+                    </a>
+                </li>
             </ul>
         </div>
-        <div class="character">
-            <div class="character__item --mango">
-                <h1 class="name">
-                    <img src="../images/mango_name.svg" alt="萌果君">
-                </h1>
-                <div class="img_box">
-                    <img src="../images/mango_img1.png" alt="mangoking">
-                    <img src="../images/mango_img2.png" alt="料理">
-                    <img src="../images/mango_img3.png" alt="種植">
-                    <img src="../images/mango_img4.png" alt="探索">
+        <div class="main_container --portfolio">
+            <div class="sort">
+                <ul class="sort__list">
+                    <li @click="tabNum = 0" :class="['sort__btn' ,this.tabNum == 0 ? 'on' : '']">Character</li>
+                    <li @click="tabNum = 1" :class="['sort__btn' ,this.tabNum == 2 ? 'on' : '']">GIF
+                    </li>
+                    <li @click="tabNum = 2" :class="['sort__btn' ,this.tabNum == 3 ? 'on' : '']">
+                        Comics</li>
+                    <li @click="tabNum = 3" :class="['sort__btn' ,this.tabNum == 4 ? 'on' : '']">
+                        Video</li>
+                </ul>
+            </div>
+            <div :class="['character' ,this.tabNum == 0 ? '' : 'd_none']">
+                <div class="character__item --mango --active">
+                    <h1 class="name">
+                        <img src="../images/portfolio/character/mango_name.svg" alt="萌果君">
+                    </h1>
+                    <div class="img_box">
+                        <img src="../images/portfolio/character/mango_img1.png" alt="mangoking">
+                        <img src="../images/portfolio/character/mango_img2.png" alt="料理">
+                        <img src="../images/portfolio/character/mango_img3.png" alt="種植">
+                        <img src="../images/portfolio/character/mango_img4.png" alt="探索">
+                    </div>
+                </div>
+                <div class="character__item --chabao">
+                    <h1 class="name">
+                        <img src="../images/portfolio/character/chabao_name.svg" alt="柴寶">
+                    </h1>
+                    <div class="img_box">
+                        <img src="../images/portfolio/character/chabao_img1.png" alt="Chabao">
+                        <img src="../images/portfolio/character/chabao_img2.png" alt="各種睡">
+                        <img src="../images/portfolio/character/chabao_img3.png" alt="飛翔">
+                        <img src="../images/portfolio/character/chabao_img4.png" alt="外送">
+                    </div>
+                </div>
+                <div class="character__item --hanji ">
+                    <h1 class="name">
+                        <img src="../images/portfolio/character/hanji_name.svg" alt="夯吉">
+                    </h1>
+                    <div class="img_box">
+                        <img src="../images/portfolio/character/hanji_img1.png" alt="Hanji">
+                        <img src="../images/portfolio/character/hanji_img2.png" alt="挑食家">
+                        <img src="../images/portfolio/character/hanji_img3.png" alt="釣魚">
+                        <img src="../images/portfolio/character/hanji_img4.png" alt="逛街">
+                    </div>
+                </div>
+                <ul class="normal_page" style="display:none;">
+                    <li class="normal_page_btn">3</li>
+                    <li class="normal_page_btn">2</li>
+                    <li class="normal_page_btn on">1</li>
+                    <li class="normal_page_btn prev"></li>
+                    <li class="normal_page_btn next"></li>
+                </ul>
+            </div>
+            <div :class="['gif r4c2' ,this.tabNum == 1 ? '' : 'd_none']">
+                <ul class="r4c2_group">
+                    <li class="r4c2_item">
+                        <img src="../images/portfolio/gif/G1.gif" alt="">
+                    </li>
+                    <li class="r4c2_item">
+                        <img src="../images/portfolio/gif/G1.gif" alt="">
+                    </li>
+                    <li class="r4c2_item">
+                        <img src="../images/portfolio/gif/G1.gif" alt="">
+                    </li>
+                    <li class="r4c2_item">
+                        <img src="../images/portfolio/gif/G1.gif" alt="">
+                    </li>
+                    <li class="r4c2_item">
+                        <img src="../images/portfolio/gif/G1.gif" alt="">
+                    </li>
+                </ul>
+            </div>
+            <div :class="['comics r4c2' ,this.tabNum == 2 ? '' : 'd_none']">
+                <ul class="r4c2_group">
+                    <li class="r4c2_item">
+                        <img src="../images/portfolio/gif/G1.gif" alt="">
+                    </li>
+                    <li class="r4c2_item">
+                        <img src="../images/portfolio/gif/G1.gif" alt="">
+                    </li>
+                    <li class="r4c2_item">
+                        <img src="../images/portfolio/gif/G1.gif" alt="">
+                    </li>
+                    <li class="r4c2_item">
+                        <img src="../images/portfolio/gif/G1.gif" alt="">
+                    </li>
+                    <li class="r4c2_item">
+                        <img src="../images/portfolio/gif/G1.gif" alt="">
+                    </li>
+                </ul>
+            </div>
+            <div :class="['video r4c2' ,this.tabNum == 3 ? '' : 'd_none']">
+                <div class="video_box">
+                    <div class="video_item">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/AddiTcSxc0E?controls=0"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+
                 </div>
             </div>
-            <div class="character__item --chabao">
-                <h1 class="name">
-                    <img src="../images/chabao_name.svg" alt="柴寶">
-                </h1>
-                <div class="img_box">
-                    <img src="../images/chabao_img1.png" alt="Chabao">
-                    <img src="../images/chabao_img2.png" alt="各種睡">
-                    <img src="../images/chabao_img3.png" alt="飛翔">
-                    <img src="../images/chabao_img4.png" alt="外送">
-                </div>
-            </div>
-            <div class="character__item --hanji --active">
-                <h1 class="name">
-                    <img src="../images/hanji_name.svg" alt="夯吉">
-                </h1>
-                <div class="img_box">
-                    <img src="../images/hanji_img1.png" alt="Hanji">
-                    <img src="../images/hanji_img2.png" alt="挑食家">
-                    <img src="../images/hanji_img3.png" alt="釣魚">
-                    <img src="../images/hanji_img4.png" alt="逛街">
-                </div>
-            </div>
-            <ul class="normal_page" style="display:none;">
-                <li class="normal_page_btn">3</li>
-                <li class="normal_page_btn">2</li>
-                <li class="normal_page_btn on">1</li>
-                <li class="normal_page_btn prev"></li>
-                <li class="normal_page_btn next"></li>
-            </ul>
         </div>
-        <div class="gif"></div>
-        <div class="comics"></div>
-        <div class="video"></div>
     </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.9/vue.js'
+        integrity='sha512-o9SZrtqlGkpa7EF+dDrNjEdRFFYhymlrBzDKpolHNolxsyx0IcXAbEm9i1e8QpoiMgEdKZVtY8XiK1t8i6jVDA=='
+        crossorigin='anonymous'></script>
+    <script>
+
+        new Vue({
+            el: '#app',
+            data() {
+                return {
+                    tabNum: 0,
+                }
+            }
+        })
+    </script>
 </body>
+
 </html>
